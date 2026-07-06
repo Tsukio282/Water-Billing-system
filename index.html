@@ -137,7 +137,7 @@
     </div>
     
     <button onclick="generateBill()">Generate Bill</button>
-    <button onclick="resetBtn()">Reset Button</button>
+    <button onclick="resetForm()" class="reset-btn">Reset Form</button>
 
     <div class="counter">
         Transactions Processed: <span id="txCount">0</span>
@@ -239,7 +239,13 @@
             console.error("Error recording transaction:", error);
         });
     }
-
+    function resetForm(){
+        document.getElementbyID("customerName").Value = "";
+        document.getElementbyID("consumption").Value = "";
+        document.getElementbyID("customerType").Value = "Regular";
+        document.getElementbyID("billOutput").style.display = "none";
+        
+    }
 </script>
 
 </body>
